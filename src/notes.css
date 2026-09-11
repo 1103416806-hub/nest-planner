@@ -1,0 +1,191 @@
+.notes-page,.quick-note,.desktop-note{--note-accent:var(--accent,#007aff);--note-text:var(--text,#17212e);--note-muted:#687587;--note-border:rgba(112,133,161,.16);--note-glass:rgba(255,255,255,.66);color:var(--note-text)}
+.notes-page{padding:32px 36px 40px;overflow-y:auto;min-height:0;scrollbar-width:thin;background:transparent}
+.notes-page .page-intro{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.notes-page .page-intro h1{margin:0;font-size:29px;font-weight:650;letter-spacing:-.7px;line-height:1.3;color:var(--note-text)}
+.notes-page .page-intro p{margin:8px 0 0;font-size:13px;color:var(--note-muted);line-height:1.6;letter-spacing:0}
+.notes-page .notes-create-actions{display:flex;gap:9px;flex-shrink:0}
+.notes-page .notes-create-actions .btn{min-height:39px;border-radius:11px;font-size:12px}
+.notes-page .desktop-note-guide{display:flex;align-items:flex-start;gap:13px;padding:16px 18px;margin-top:24px;border:1px solid var(--note-border);border-radius:14px;background:rgba(255,255,255,.52);backdrop-filter:blur(16px)}
+.notes-page .desktop-note-guide>svg{flex-shrink:0;margin-top:2px;color:var(--note-accent)}
+.notes-page .desktop-note-guide h2{margin:0;color:var(--note-text);font-size:14px;font-weight:550;line-height:1.5}
+.notes-page .desktop-note-guide p{margin:5px 0 4px;font-size:12px;color:var(--note-muted);line-height:1.8}
+.notes-page .desktop-note-guide span{display:block;font-size:11px;color:var(--note-muted);line-height:1.7}
+.notes-page .notes-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:28px 0 0;border-bottom:1px solid var(--note-border);padding:0 0 13px}
+.notes-page .text-tabs{display:flex;gap:6px;margin:0}
+.notes-page .text-tabs>button{display:flex;align-items:center;gap:6px;min-height:33px;padding:6px 12px;border-radius:9px;border:0;font-size:12px;color:var(--note-muted)}
+.notes-page .text-tabs>button.active{color:var(--note-accent);background:rgba(0,122,255,.075)}
+.notes-page .text-tabs>button>span{font-size:11px;color:inherit;background:transparent;padding:0;margin-left:1px}
+.notes-page .notes-search{display:flex;align-items:center;gap:8px;min-width:0;color:var(--note-muted);padding:7px 10px;border:1px solid var(--note-border);border-radius:9px;background:rgba(255,255,255,.4)}
+.notes-page .notes-search input{width:150px;min-width:0;border:0;padding:0;background:transparent;color:var(--note-text);font-size:12px;outline:0}
+.notes-page .notes-search:focus-within{outline:2px solid rgba(0,122,255,.2)}
+.notes-page .notes-sync-status{display:flex;align-items:center;gap:6px;margin:13px 0 21px;font-size:11px;color:var(--note-muted);line-height:1.6;flex-wrap:wrap}
+.notes-page .notes-sync-status>svg{color:var(--note-accent);opacity:.75}
+.notes-page .notes-desktop-hint{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:11px}
+.notes-page .notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:19px;align-items:start}
+.notes-page .note-card{position:relative;display:flex;flex-direction:column;min-height:252px;max-height:none;padding:17px 18px 12px;border:1px solid rgba(255,255,255,.84);border-radius:17px;background:var(--note-glass);box-shadow:0 3px 5px rgba(58,79,110,.025),0 12px 29px rgba(52,72,104,.045),inset 0 0 0 1px rgba(141,159,185,.055);backdrop-filter:blur(18px) saturate(125%);transform:none;transition:box-shadow .16s,border-color .16s;overflow:hidden}
+.notes-page .note-card:hover{transform:none;border-color:rgba(172,193,222,.65);box-shadow:0 10px 30px rgba(52,72,104,.09)}
+.notes-page .note-card.yellow,.notes-page .note-editor.yellow{background:rgba(255,255,255,.78)}
+.notes-page .note-card.green,.notes-page .note-editor.green{background:rgba(242,245,249,.8)}
+.notes-page .note-card.pink,.notes-page .note-editor.pink{background:rgba(246,245,251,.8)}
+.notes-page .note-card.blue,.notes-page .note-editor.blue{background:rgba(240,247,255,.76)}
+.notes-page .note-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 13px;color:var(--note-muted)}
+.notes-page .note-actions>.note-kind{display:flex;align-items:center;gap:6px;font-size:11px;white-space:nowrap}
+.notes-page .note-actions>div{display:flex;gap:3px;opacity:1}
+.notes-page .note-actions .icon-btn{color:#7c8796}
+.notes-page .icon-btn:hover,.desktop-note .icon-btn:hover{background:rgba(111,143,186,.12);color:var(--note-accent)}
+.notes-page .icon-btn.is-pinned,.desktop-note .icon-btn.is-pinned{background:rgba(0,122,255,.1);color:var(--note-accent)}
+.notes-page .note-body{display:block;width:100%;min-height:0;flex:1;text-align:left;padding:0;word-break:break-word;background:none}
+.notes-page .note-body h3{font-size:16px;font-weight:600;line-height:1.6;color:var(--note-text);margin:0;max-height:3.2em;overflow:hidden}
+.notes-page .note-body p{font-size:13px;line-height:1.85;color:#596778;white-space:pre-wrap;margin:10px 0 15px;max-height:8em;overflow:hidden}
+.notes-page .memo-card .note-body{min-height:150px}
+.notes-page .checklist-card .note-body{flex:0;margin-bottom:8px}
+.notes-page .note-card>footer{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:17px;padding-top:10px;border-top:1px solid var(--note-border);font-size:10px;color:var(--note-muted)}
+.notes-page .note-card>footer>div{display:flex;align-items:center;gap:5px}
+.notes-page .note-date{font-variant-numeric:tabular-nums}
+.notes-page .note-desktop-action{display:flex;gap:5px;align-items:center;padding:5px 7px;border:1px solid rgba(0,122,255,.13);border-radius:7px;background:rgba(0,122,255,.045);font-size:11px;color:var(--note-accent);white-space:nowrap}
+.notes-page .note-desktop-action:hover{background:rgba(0,122,255,.07)}
+.notes-page .note-card-checklist{flex:1;min-height:129px;display:flex;flex-direction:column}
+.notes-page .note-card-checklist ul{list-style:none;padding:0;margin:0 0 10px;display:flex;flex-direction:column;gap:9px}
+.notes-page .note-card-checklist li label{display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:13px;line-height:1.6;color:#46566a}
+.notes-page .note-card-checklist input[type=checkbox]{flex-shrink:0;margin:3px 0 0;width:15px;height:15px;accent-color:var(--note-accent)}
+.notes-page .note-card-checklist li span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.notes-page .note-card-checklist li.is-done span{text-decoration:line-through;color:#919cac}
+.notes-page .note-list-summary{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;color:var(--note-muted);font-size:10px}
+.notes-page .note-list-summary button{padding:0;color:var(--note-accent);font-size:10px}
+.notes-page .note-empty-list{align-self:flex-start;color:var(--note-accent);font-size:12px;padding:6px 0}
+.notes-page .notes-empty{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:390px;color:#95a4b6;text-align:center;gap:0}
+.notes-page .notes-empty h2{font-size:19px;font-weight:550;color:var(--note-text);margin:21px 0 9px}
+.notes-page .notes-empty p{font-size:12px;line-height:1.8;color:var(--note-muted);margin:0 0 20px}
+.notes-page .note-editor{width:min(540px,100%);padding:23px 25px 15px;max-height:min(720px,91dvh);display:flex;flex-direction:column;backdrop-filter:blur(30px) saturate(140%);border:1px solid rgba(255,255,255,.9);border-radius:20px;color:var(--note-text)}
+.notes-page .note-editor>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.notes-page .note-editor>header h2{font-size:18px;font-weight:600}
+.notes-page .note-editor-tools{display:flex;align-items:center;gap:8px}
+.notes-page .note-editor-tools .btn{min-height:31px;padding:5px 9px;font-size:11px}
+.notes-page .note-editor>footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-shrink:0;margin:14px 0 0;padding:13px 0 0;border-top:1px solid var(--note-border)}
+.notes-page .note-editor .saved-hint{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--note-muted);white-space:nowrap}
+.notes-page .note-colors{display:flex;gap:8px}
+.notes-page .note-colors button{width:21px;height:21px;border:1px solid rgba(138,155,179,.3);border-radius:50%;display:grid;place-items:center;padding:0;color:#5d728e;outline:none}
+.notes-page .note-colors button.yellow{background:#fff}.notes-page .note-colors button.green{background:#e5eaf0}.notes-page .note-colors button.pink{background:#e9e6f0}.notes-page .note-colors button.blue{background:#e0ecfb}
+.notes-page .note-colors button.active{box-shadow:0 0 0 2px rgba(0,122,255,.22)}
+.note-content-editor{display:flex;flex-direction:column;min-height:0;flex:1;color:var(--note-text,#17212e)}
+.note-content-editor.is-memo{min-height:270px}
+.note-content-editor .memo-content{display:block;resize:none;width:100%;min-height:270px;flex:1;border:0;background:transparent;padding:1px 0;outline:0!important;border-radius:0;color:var(--note-text,#17212e);font-size:15px;line-height:1.95;box-shadow:none;font-weight:400;letter-spacing:0;scrollbar-width:thin}
+.note-content-editor .memo-content::placeholder{color:#9aa6b5}
+.note-content-editor .checklist-title{width:100%;font-size:20px;font-weight:600;line-height:1.5;border:0;padding:3px 0 9px;outline:none;background:transparent;color:var(--note-text,#17212e);border-radius:0}
+.note-content-editor .checklist-title::placeholder{color:#a0adbd;font-weight:500}
+.note-content-editor .checklist-progress{display:flex;align-items:center;gap:13px;font-size:11px;color:#718197;margin:2px 0 18px}
+.note-content-editor .checklist-progress>div{height:3px;background:rgba(109,135,169,.13);border-radius:4px;flex:1;max-width:100px;overflow:hidden}
+.note-content-editor .checklist-progress i{display:block;height:100%;background:var(--accent,#007aff);border-radius:4px;transition:width .16s}
+.note-content-editor .checklist-items{padding:0 2px 0 0;margin:0;list-style:none;overflow-y:auto;scrollbar-width:thin;max-height:340px;min-height:0}
+.note-content-editor .checklist-items>li{display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(110,133,165,.1);min-height:45px}
+.note-content-editor .checklist-items input[type=checkbox]{width:17px;height:17px;flex-shrink:0;accent-color:var(--accent,#007aff);margin:0}
+.note-content-editor .checklist-item-text{border:0;background:transparent;outline:none;padding:11px 0;font-size:14px;line-height:1.5;color:#24364a;width:100%;min-width:0;border-radius:0}
+.note-content-editor .checklist-item-text:focus{box-shadow:0 1px 0 rgba(0,122,255,.38)}
+.note-content-editor .checklist-items .is-done .checklist-item-text{text-decoration:line-through;color:#96a2b1}
+.note-content-editor .checklist-delete{color:#8d9aab;opacity:.7;flex-shrink:0}
+.note-content-editor .checklist-delete:hover{color:#df4d58;opacity:1;background:rgba(223,77,88,.07)}
+.note-content-editor .checklist-empty{font-size:13px;color:#8c9aab;margin:24px 0;line-height:1.7}
+.note-content-editor .checklist-add{display:flex;align-items:center;gap:9px;min-height:43px;border:1px solid rgba(139,161,191,.19);border-radius:11px;background:rgba(255,255,255,.5);padding:3px 8px 3px 10px;margin-top:16px;color:var(--accent,#007aff);flex-shrink:0}
+.note-content-editor .checklist-add:focus-within{border-color:rgba(0,122,255,.35);box-shadow:0 0 0 2px rgba(0,122,255,.06)}
+.note-content-editor .checklist-add input{width:100%;min-width:0;border:0;background:transparent;padding:7px 0;font-size:12px;outline:none;color:var(--text,#17212e)}
+.note-content-editor .checklist-add input::placeholder{color:#8f9dae}
+.quick-note .quick-paper{background:rgba(242,247,253,.64);border:1px solid rgba(150,174,204,.18);border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8);padding:12px 13px 7px;transform:none;margin-top:12px}
+.quick-note .quick-paper:before,.quick-note .quick-paper:after{display:none}
+.quick-note .quick-paper textarea{color:var(--note-text);font-size:12px;line-height:1.85;padding:0;background:transparent;min-height:63px;resize:none;border:0;outline:none}
+.quick-note .quick-paper textarea::placeholder{color:#919eb0}
+.quick-note .quick-paper .paper-bottom{display:flex;justify-content:space-between;align-items:center;color:#8d9bad;font-size:9px}
+.quick-note .quick-paper .paper-bottom .icon-btn{background:var(--note-accent);color:white;border-radius:7px;width:24px;height:24px}
+.quick-note .section-label{color:var(--note-muted)}
+.quick-note .latest-note{display:flex;align-items:center;gap:6px;margin-top:11px;color:var(--note-muted);font-size:11px}
+.quick-note .latest-note>span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left}
+html.desktop-note-document,html.desktop-note-document body,html.desktop-note-document #root{width:100%;height:100%;min-width:0;min-height:0;margin:0;background:transparent!important;overflow:hidden}
+.desktop-note{display:flex;flex-direction:column;width:100%;height:100dvh;min-height:220px;border:1px solid rgba(255,255,255,.64);border-radius:16px;overflow:hidden;background:rgba(246,249,254,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.72),inset 0 0 0 1px rgba(132,152,181,.1);backdrop-filter:blur(28px) saturate(130%);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei UI',sans-serif}
+.desktop-note.yellow{background:rgba(253,254,255,.38)}.desktop-note.green{background:rgba(240,244,249,.34)}.desktop-note.pink{background:rgba(246,245,252,.32)}.desktop-note.blue{background:rgba(242,248,255,.34)}
+.desktop-note .desktop-note-header{height:50px;min-height:50px;display:flex;align-items:center;justify-content:space-between;gap:7px;padding:0 9px 0 16px;border-bottom:1px solid rgba(139,160,190,.12);-webkit-app-region:drag;user-select:none}
+.desktop-note .desktop-note-drag{min-width:0;display:flex;align-items:center;gap:7px;color:#687b92;font-size:11px;font-weight:550;flex:1;align-self:stretch}
+.desktop-note .desktop-note-controls{display:flex;gap:2px;-webkit-app-region:no-drag}
+.desktop-note .desktop-note-controls .icon-btn{width:29px;height:29px;border-radius:8px;color:#72839a}
+.desktop-note .desktop-note-controls .icon-btn:last-child:hover{color:#dc4e58;background:rgba(220,78,88,.07)}
+.desktop-note .desktop-note-content{display:flex;flex-direction:column;flex:1;min-height:0;padding:15px 17px 12px;overflow:hidden}
+.desktop-note .note-content-editor.is-memo{min-height:0}
+.desktop-note .note-content-editor .memo-content{font-size:14px;line-height:1.95;min-height:0}
+.desktop-note .note-content-editor .checklist-title{font-size:18px;padding-bottom:8px}
+.desktop-note .note-content-editor .checklist-progress{margin-bottom:8px;font-size:10px}
+.desktop-note .note-content-editor .checklist-items{max-height:none;flex:1;overflow-y:auto}
+.desktop-note .note-content-editor .checklist-item-text{font-size:13px;padding:9px 0}
+.desktop-note .note-content-editor .checklist-items>li{min-height:41px;gap:8px}
+.desktop-note .note-content-editor .checklist-add{margin-top:12px;min-height:37px;padding-left:8px;gap:6px;border-radius:9px}
+.desktop-note .note-content-editor .checklist-add input{font-size:11px}
+.desktop-note .desktop-note-footer{height:32px;min-height:32px;border-top:1px solid rgba(139,160,190,.1);display:flex;align-items:center;gap:5px;padding:0 17px;color:#8898aa;font-size:10px;position:relative;user-select:none}
+.desktop-note .desktop-note-footer>svg{color:#7b9bba}
+.desktop-note .desktop-note-footer>span[role=status]{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.desktop-note .desktop-note-resize{position:absolute;right:7px;bottom:7px;width:9px;height:9px;border-right:2px solid rgba(135,155,181,.35);border-bottom:2px solid rgba(135,155,181,.35);border-radius:0 0 2px 0;pointer-events:none}
+.desktop-note .desktop-note-missing{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:12px;padding:20px;text-align:center;color:#8394a9}
+.desktop-note .desktop-note-missing h1{font-size:17px;font-weight:550;color:#485e79;margin:0}
+.desktop-note .desktop-note-missing p{font-size:12px;line-height:1.8;margin:0}
+.desktop-note button,.desktop-note input,.desktop-note textarea{-webkit-app-region:no-drag}
+.desktop-note button:focus-visible,.notes-page button:focus-visible{outline:2px solid rgba(0,122,255,.65);outline-offset:3px}
+@media(max-width:760px){.notes-page{padding:25px 19px 30px}.notes-page .page-intro{align-items:flex-start;flex-direction:column;gap:17px}.notes-page .page-intro h1{font-size:27px;line-height:1.3}.notes-page .page-intro p{font-size:12px;margin-top:6px}.notes-page .notes-create-actions{width:100%}.notes-page .notes-create-actions .btn{flex:1;min-height:39px;font-size:12px;padding:8px 11px}.notes-page .notes-toolbar{margin-top:23px;gap:10px}.notes-page .text-tabs>button{padding:6px 9px;font-size:11px}.notes-page .notes-search{padding:7px 8px;gap:6px}.notes-page .notes-search input{width:95px;font-size:11px}.notes-page .notes-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.notes-page .note-card{min-height:225px;padding:13px 13px 10px;border-radius:14px}.notes-page .note-actions{margin-bottom:10px;gap:4px}.notes-page .note-actions>.note-kind{font-size:10px;gap:5px}.notes-page .note-actions>.note-kind svg{width:14px}.notes-page .note-actions>div{gap:0}.notes-page .note-actions .icon-btn{width:22px;height:25px}.notes-page .note-body h3{font-size:14px}.notes-page .note-body p{font-size:12px;line-height:1.8;margin-top:8px}.notes-page .memo-card .note-body{min-height:135px}.notes-page .note-card>footer{font-size:9px;margin-top:12px;gap:3px}.notes-page .note-desktop-action{font-size:10px;padding:5px 3px;gap:4px}.notes-page .note-card-checklist li label{font-size:12px;gap:7px}.notes-page .note-card-checklist{min-height:125px}.notes-page .notes-sync-status{font-size:10px;margin-top:12px;gap:5px}.notes-page .notes-desktop-hint{width:100%;margin-left:0;font-size:10px}.notes-page .notes-empty{min-height:340px}.notes-page .notes-empty h2{font-size:17px}.notes-page .note-editor{padding:19px 20px 14px;max-height:90dvh}.notes-page .note-editor>header h2{font-size:17px}.notes-page .note-editor .note-content-editor .memo-content{font-size:14px;min-height:220px}.notes-page .note-editor .note-content-editor.is-memo{min-height:220px}.notes-page .note-editor .checklist-item-text{font-size:13px}}
+@media(max-width:420px){.notes-page .notes-grid{grid-template-columns:minmax(0,1fr)}.notes-page .note-card{min-height:215px}.notes-page .memo-card .note-body{min-height:122px}.notes-page .note-body h3{font-size:16px}.notes-page .note-body p{font-size:13px}.notes-page .note-actions>.note-kind{font-size:11px}.notes-page .note-actions .icon-btn{width:27px;height:27px}.notes-page .note-card-checklist li label{font-size:13px}.notes-page .note-desktop-action{font-size:11px}.notes-page .note-card>footer{font-size:10px}}
+
+/* Every note keeps its checklist above an independent free-form writing area. */
+.notes-page .note-editor{height:min(650px,calc(100dvh - 48px));min-height:0;overflow:hidden}
+.notes-page .note-editor>header{flex-shrink:0}
+.note-content-editor.note-dual-editor{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1.12fr);gap:14px;flex:1;min-width:0;min-height:0;overflow:hidden}
+.note-content-editor.note-dual-editor.has-no-items{grid-template-rows:auto minmax(0,1fr)}
+.note-dual-editor .note-todo-section,.note-dual-editor .note-memo-section{display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+.note-dual-editor .note-memo-section{border-top:1px solid rgba(111,133,164,.19);padding-top:12px}
+.note-dual-editor .note-section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:22px;flex-shrink:0;margin:0 0 9px}
+.note-dual-editor .note-section-heading h3{display:flex;align-items:center;gap:6px;margin:0;font-size:13px;font-weight:600;line-height:1.6;color:#2d4059}
+.note-dual-editor .note-section-heading h3 svg{color:#6687b0}
+.note-dual-editor .note-section-heading>span{font-size:11px;line-height:1.5;color:#657990;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note-content-editor.note-dual-editor .checklist-add{margin:0 0 8px;min-height:38px;padding:3px 4px 3px 11px;gap:6px;border-radius:10px;background:rgba(255,255,255,.34);flex-shrink:0}
+.note-content-editor.note-dual-editor .checklist-add input{font-size:12px;line-height:1.5;padding:6px 0;color:#26394f}
+.note-content-editor.note-dual-editor .checklist-add input::placeholder{color:#6f8198}
+.note-dual-editor .checklist-add-button{display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:55px;min-height:29px;padding:5px 8px;border-radius:7px;background:rgba(0,122,255,.12);color:#146bbd;font-size:11px;font-weight:550;flex-shrink:0}
+.note-dual-editor .checklist-add-button:hover:not(:disabled){background:rgba(0,122,255,.2)}
+.note-dual-editor .checklist-add-button:disabled{opacity:.45}
+.note-content-editor.note-dual-editor .checklist-items{flex:1;min-height:0;max-height:none;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;padding:0 3px 0 0;margin:0}
+.note-content-editor.note-dual-editor.has-no-items .checklist-items{flex:0}
+.note-content-editor.note-dual-editor .checklist-items>li{min-height:38px;gap:8px;border-bottom-color:rgba(112,132,161,.14)}
+.note-content-editor.note-dual-editor .checklist-items input[type=checkbox]{width:16px;height:16px}
+.note-content-editor.note-dual-editor .checklist-item-text{flex:1;width:0;min-width:0;padding:8px 0;font-size:13px;line-height:1.6;color:#26394f}
+.note-content-editor.note-dual-editor .checklist-items .is-done .checklist-item-text{color:#718197}
+.note-content-editor.note-dual-editor .checklist-delete{color:#6d8099;opacity:.8}
+.note-content-editor.note-dual-editor .checklist-empty{margin:2px 0 0;font-size:11px;line-height:1.7;color:#70829a}
+.note-dual-editor .checklist-limit{flex-shrink:0;margin:5px 0 0;font-size:11px;line-height:1.5;color:#6c7f96}
+.note-content-editor.note-dual-editor .memo-content,.notes-page .note-editor .note-dual-editor .memo-content{display:block;flex:1;width:100%;height:0;min-height:0;max-height:none;resize:none;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:0 3px 0 0;color:#26394f;font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.note-content-editor.note-dual-editor .memo-content::placeholder{color:#70829a}
+.desktop-note .desktop-note-header{background:rgba(255,255,255,.17);border-bottom-color:rgba(255,255,255,.35)}
+.desktop-note .desktop-note-drag,.desktop-note .desktop-note-controls .icon-btn{color:#506983}
+.desktop-note .desktop-note-content{padding:13px 15px 11px;background:transparent}
+.desktop-note .note-content-editor.note-dual-editor{gap:11px}
+.desktop-note .note-dual-editor .note-memo-section{padding-top:10px;border-top-color:rgba(255,255,255,.5)}
+.desktop-note .note-dual-editor .note-section-heading{margin-bottom:7px;min-height:21px}
+.desktop-note .note-dual-editor .note-section-heading h3{font-size:13px}
+.desktop-note .note-dual-editor .note-section-heading>span{font-size:10px;color:#546f8a}
+.desktop-note .note-content-editor.note-dual-editor .checklist-add{margin-top:0;min-height:36px;margin-bottom:6px;background:rgba(255,255,255,.32);border-color:rgba(255,255,255,.5)}
+.desktop-note .note-content-editor.note-dual-editor .checklist-add input{font-size:12px}
+.desktop-note .note-content-editor.note-dual-editor .memo-content{min-height:0;font-size:13px;line-height:1.9}
+.desktop-note .desktop-note-footer{background:rgba(255,255,255,.13);border-top-color:rgba(255,255,255,.33);color:#58708c}
+.desktop-note .desktop-note-footer>svg{color:#527daa}
+@media(max-width:420px){.notes-page .note-editor{padding:17px 17px 13px;height:min(620px,calc(100dvh - 32px));max-height:calc(100dvh - 32px)}.notes-page .note-editor>header{margin-bottom:13px}.note-dual-editor .note-section-heading{gap:7px}.note-content-editor.note-dual-editor .checklist-add input{font-size:11px}.note-dual-editor .checklist-add-button{min-width:51px;padding-left:6px;padding-right:6px}.notes-page .note-editor .note-dual-editor .memo-content{font-size:13px;min-height:0}}
+@media(max-height:460px){.desktop-note .desktop-note-header{height:44px;min-height:44px}.desktop-note .desktop-note-footer{height:27px;min-height:27px}.desktop-note .desktop-note-content{padding:10px 13px}.desktop-note .note-content-editor.note-dual-editor{gap:9px}.desktop-note .note-dual-editor .note-memo-section{padding-top:8px}.desktop-note .note-content-editor.note-dual-editor .checklist-items>li{min-height:35px}.desktop-note .note-content-editor.note-dual-editor .checklist-item-text{padding-top:6px;padding-bottom:6px}}
+.note-content-editor.note-dual-editor .checklist-items input[type=checkbox]{appearance:none;-webkit-appearance:none;position:relative;width:15px;height:15px;border:1px solid rgba(73,105,140,.58);border-radius:50%;background:rgba(255,255,255,.13);cursor:pointer;outline-offset:3px}
+.note-content-editor.note-dual-editor .checklist-items input[type=checkbox]:checked{background:#087aff;border-color:#087aff}
+.note-content-editor.note-dual-editor .checklist-items input[type=checkbox]:checked::after{content:'';position:absolute;left:4px;top:2px;width:3px;height:6px;border:solid #fff;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.note-content-editor.note-dual-editor .checklist-items input[type=checkbox]:focus-visible{outline:2px solid #087aff;outline-offset:3px;box-shadow:none}
+.desktop-note .note-dual-editor .note-section-heading h3{font-size:12px;font-weight:550;gap:5px}
+.desktop-note .note-dual-editor .note-section-heading h3 svg{width:13px;height:13px}
+.desktop-note .note-content-editor.note-dual-editor .checklist-items>li{min-height:32px;gap:8px}
+.desktop-note .note-content-editor.note-dual-editor .checklist-item-text{font-size:12px;line-height:1.6;padding:6px 0}
+.desktop-note .note-content-editor.note-dual-editor .checklist-delete{width:23px;height:25px}
+.notes-page .note-card.combined-card{min-height:0;background:rgba(248,251,255,.8)}
+.notes-page .combined-card .note-body{flex:0;min-height:0;margin-bottom:8px}
+.notes-page .combined-card .note-card-checklist{flex:0;min-height:0}
+.notes-page .combined-card .note-card-checklist ul{margin-bottom:6px;gap:8px}
+.notes-page .combined-card .note-list-summary{margin-top:4px}
+.notes-page .combined-card .note-empty-list{padding:3px 0;font-size:12px}
+.notes-page .combined-card .note-memo-preview{display:block;width:100%;min-width:0;margin:12px 0 0;padding:11px 0 0;border-top:1px solid var(--note-border);text-align:left;background:none;color:var(--note-text)}
+.notes-page .combined-card .note-memo-preview>span{display:block;color:var(--note-muted);font-size:11px;font-weight:500;line-height:1.5;margin-bottom:5px}
+.notes-page .combined-card .note-memo-preview>p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;max-height:5.4em;overflow:hidden;overflow-wrap:anywhere;white-space:pre-wrap;margin:0;color:#596d84;font-size:12px;line-height:1.8}

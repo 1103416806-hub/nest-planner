@@ -1,0 +1,12 @@
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import DesktopNote from './DesktopNote';
+import './styles.css';
+import './glass.css';
+import './notes.css';
+import './frame.css';
+import './task-colors.css';
+const widget = new URLSearchParams(location.search).has('note');
+document.documentElement.classList.toggle('widget-window', widget);
+document.documentElement.classList.toggle('desktop-app', !!window.nestDesktop && !widget);
+ReactDOM.createRoot(document.getElementById('root')!).render(widget ? <DesktopNote /> : <App />);

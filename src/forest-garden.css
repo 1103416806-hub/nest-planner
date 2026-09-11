@@ -1,0 +1,52 @@
+.forest-page .forest-layout{grid-template-areas:"timer garden" "timer rewards";grid-template-columns:minmax(260px,320px) minmax(0,1fr);gap:22px;align-items:start}
+.forest-page .forest-timer-column{grid-area:timer}
+.forest-page .forest-content-column{display:contents}
+.forest-page .visual-forest{grid-area:garden;min-width:0;padding:24px 24px 21px;overflow:hidden;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.94);border-radius:22px;box-shadow:0 8px 32px rgba(65,84,112,.045)}
+.forest-page .reward-shop{grid-area:rewards;min-width:0}
+.forest-page .forest-visual-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.forest-visual-heading h2{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:0;color:#344b62;font-size:20px;font-weight:550;letter-spacing:-.3px}
+.forest-visual-heading h2>span{font-size:12px;font-weight:500;color:#68858a;background:#edf4f4;padding:4px 8px;border-radius:7px;letter-spacing:0}
+.forest-visual-heading p{margin:7px 0 0;font-size:12px;line-height:1.7;color:#78899a}
+.forest-visual-heading>svg{color:#87a49b;flex-shrink:0}
+.forest-period-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px}
+.forest-period-tabs{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid #e1e8f0;border-radius:11px;background:#edf2f8}
+.forest-period-tabs>button{min-height:30px;min-width:40px;padding:5px 10px;border-radius:8px;font-size:12px;color:#6e8198;transition:background .15s,color .15s}
+.forest-period-tabs>button[aria-pressed=true]{background:rgba(255,255,255,.97);box-shadow:0 2px 6px #50688112;color:#2369ae;font-weight:550}
+.forest-back-now{font-size:11px;color:#6d87a6;padding:6px 0;white-space:nowrap}
+.forest-period-navigation{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:13px 0 0;color:#597089;font-size:12px}
+.forest-period-navigation>span{text-align:center;font-variant-numeric:tabular-nums}
+.forest-period-navigation .icon-btn{width:28px;height:28px;flex-shrink:0}
+.forest-period-navigation .icon-btn:disabled{opacity:.2;cursor:default}
+.forest-landscape{position:relative;min-width:0;margin:0 -8px}
+.forest-landscape-caption,.forest-growing-status{min-height:20px;margin:0 0 15px;text-align:center;font-size:12px;color:#7a8d9d;line-height:1.7}
+.forest-growing-status{display:flex;align-items:center;justify-content:center;gap:7px;color:#618779}
+.forest-growing-status>span{width:6px;height:6px;border-radius:50%;background:#80a591;box-shadow:0 0 0 3px #80a59116}
+.forest-growing-status>span.is-paused{background:#aab4bf;box-shadow:none}
+.forest-growing-status>em{font-style:normal;font-variant-numeric:tabular-nums;font-size:11px;color:#77998b;margin-left:2px}
+.forest-plot-navigation{display:flex;justify-content:center;align-items:center;gap:9px;margin:0 0 15px;color:#6a8096;font-size:11px}
+.forest-plot-navigation>span{text-align:center;font-variant-numeric:tabular-nums}
+.forest-plot-navigation small{font-size:10px;margin-left:8px;color:#8c9bad}
+.forest-plot-navigation button{height:27px;width:27px}
+.forest-tree-detail{display:flex;align-items:center;gap:11px;padding:11px 13px;margin-bottom:16px;border:1px solid #dce9e5;border-radius:12px;background:#f2f8f5;color:#5e8b7b}
+.forest-tree-detail>div{flex:1;min-width:0}
+.forest-tree-detail strong{display:block;overflow-wrap:anywhere;color:#405b56;font-weight:550;font-size:13px;line-height:1.6}
+.forest-tree-detail span{display:block;color:#7c938e;font-size:11px;line-height:1.7;margin-top:3px}
+.forest-tree-detail>svg,.forest-tree-detail>button{flex-shrink:0}
+.forest-period-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:17px 0 15px;border-top:1px solid #e7edf2;border-bottom:1px solid #e7edf2}
+.forest-period-stats>div{padding-left:18px;border-left:1px solid #e7edf2;min-width:0}
+.forest-period-stats>div:first-child{padding-left:0;border:0}
+.forest-period-stats strong{display:block;font-size:25px;font-weight:450;line-height:1.2;color:#435b70;font-variant-numeric:tabular-nums;letter-spacing:-.8px;overflow-wrap:anywhere}
+.forest-period-stats small{font-size:10px;font-weight:400;letter-spacing:0;margin-left:5px;color:#7b8d9e}
+.forest-period-stats span{display:block;margin-top:7px;font-size:11px;color:#8797a7}
+.forest-time-chart{margin-top:19px}
+.forest-time-chart>header{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:#798da0}
+.forest-time-chart>header>small{font-size:10px;color:#9aa7b4}
+.forest-chart-bars{display:flex;align-items:flex-end;gap:5px;margin-top:13px}
+.forest-chart-bars>[role=listitem]{flex:1;min-width:0;text-align:center}
+.forest-chart-track{height:48px;display:flex;align-items:flex-end;justify-content:center;border-bottom:1px solid #e3eaf0}
+.forest-chart-track i{display:block;width:70%;max-width:22px;border-radius:4px 4px 0 0;background:#99b8b1}
+.forest-chart-bars>[role=listitem]>span{display:block;min-height:15px;line-height:1.4;font-size:9px;color:#93a1ae;margin-top:6px;white-space:nowrap}
+.visual-forest button:focus-visible{outline:2px solid #167aff;outline-offset:3px}
+@media(max-width:1100px){.forest-page .forest-layout{grid-template-columns:minmax(235px,280px) minmax(0,1fr);gap:16px}.forest-page .visual-forest{padding:20px 18px}.forest-period-stats>div{padding-left:12px}.forest-period-stats strong{font-size:23px}.forest-period-tabs>button{min-width:31px;padding-inline:8px}}
+@media(max-width:760px){.forest-page .forest-layout{grid-template-areas:"garden" "timer" "rewards";grid-template-columns:minmax(0,1fr);gap:18px}.forest-page .visual-forest{padding:22px 18px}.forest-period-controls{gap:7px}.forest-period-tabs>button{min-width:34px;padding-inline:8px}.forest-visual-heading h2{font-size:20px}.forest-visual-heading p{font-size:11px}.forest-period-stats strong{font-size:24px}.forest-back-now{font-size:10px}.forest-landscape-caption,.forest-growing-status{font-size:11px}.forest-plot-navigation small{display:block;margin:3px 0 0}}
+@media(prefers-reduced-motion:reduce){.forest-period-tabs>button{transition:none}}
