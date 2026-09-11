@@ -1,0 +1,14 @@
+node_modules/
+dist/
+release/
+test-results/
+.cache/
+*.tsbuildinfo
+.test-profile/
+playwright-report/
+artifacts/
+city-3d/
+.env
+.env.*
+!.env.example
+*.log
